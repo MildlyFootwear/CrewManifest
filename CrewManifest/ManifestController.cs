@@ -434,7 +434,7 @@ namespace CrewManifest
                 {
                     ProtoCrewMember kerbal = SelectedPart.protoModuleCrew[i];
                     GUILayout.BeginHorizontal();
-                    GUILayout.Label(kerbal.name, GUILayout.Width(200));
+                    GUILayout.Label(kerbal.name+" ("+kerbal.trait+")", GUILayout.Width(200));
                     if (IsPreLaunch)
                     {
                         if (GUILayout.Button("Remove", GUILayout.Width(60)))

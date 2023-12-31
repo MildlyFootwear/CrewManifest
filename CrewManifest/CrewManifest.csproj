@@ -49,10 +49,6 @@
     <Reference Include="ClickThroughBlocker">
       <HintPath>$(KSPDIR)\GameData\000_ClickThroughBlocker\Plugins\ClickThroughBlocker.dll</HintPath>
     </Reference>
-    <Reference Include="I18N, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\I18N.dll</HintPath>
-    </Reference>
     <Reference Include="I18N.CJK, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\I18N.CJK.dll</HintPath>
@@ -61,33 +57,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\I18N.MidEast.dll</HintPath>
     </Reference>
-    <Reference Include="I18N.Other, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\I18N.Other.dll</HintPath>
-    </Reference>
     <Reference Include="I18N.Rare, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\I18N.Rare.dll</HintPath>
-    </Reference>
-    <Reference Include="I18N.West, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\I18N.West.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Ionic.Zip.dll</HintPath>
     </Reference>
-    <Reference Include="KSPAssets, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\KSPAssets.dll</HintPath>
-    </Reference>
     <Reference Include="KSPAssets.XmlSerializers, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\KSPAssets.XmlSerializers.dll</HintPath>
-    </Reference>
-    <Reference Include="KSPTrackIR, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\KSPTrackIR.dll</HintPath>
     </Reference>
     <Reference Include="KSP_Log">
       <HintPath>$(KSPDIR)\GameData\SpaceTuxLibrary\Plugins\KSP_Log.dll</HintPath>
@@ -95,10 +75,6 @@
     <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Mono.Posix.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -136,17 +112,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
@@ -155,41 +123,21 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.AIModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.ARModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
@@ -198,25 +146,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.DSPGraphModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.GridModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
