@@ -85,16 +85,6 @@ namespace CrewManifest
 
                 manifestController.ShowWindow = !manifestController.ShowWindow;
 
-#if false
-                if (button != null)
-                    button.TexturePath = manifestController.ShowWindow ? "CrewManifest/Icons/IconOff_24" : "CrewManifest/Icons/IconOn_24";
-
-                if (appButton != null)
-                    appButton.SetTexture(manifestController.ShowWindow ? onTexture : offTexture);
-#endif
-
-                toolbarControl.SetTexture(manifestController.ShowWindow ? "CrewManifest/Icons/IconOff_38" : "CrewManifest/Icons/IconOn_38",
-                    manifestController.ShowWindow ? "CrewManifest/Icons/IconOff_24" : "CrewManifest/Icons/IconOn_24");
             }
         }
 

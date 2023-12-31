@@ -294,7 +294,7 @@ namespace CrewManifest
                 bool selectedPartSourceFound = false;
                 foreach (Part part in Vessel.Parts)
                 {
-                    if (part.CrewCapacity > 0)
+                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count != 0)
                     {
                         _crewablePartsSource.Add(part);
                         selectedPartSourceFound |= part.Equals(_selectedPartSource);
@@ -362,7 +362,7 @@ namespace CrewManifest
 
                 if (ShowWindow)
                 {
-                    ManifestBehaviour.Settings.ManifestPosition = ClickThruBlocker.GUILayoutWindow(398541, ManifestBehaviour.Settings.ManifestPosition, ManifestWindow, "Crew Manifest", GUILayout.MinHeight(20));
+                    ManifestBehaviour.Settings.ManifestPosition = ClickThruBlocker.GUILayoutWindow(398541, ManifestBehaviour.Settings.ManifestPosition, ManifestWindow, "Crew Manifest", GUILayout.MinHeight(20), GUILayout.MaxWidth(420));
                 }
 
                 if (ShowWindow && _showTransferWindow)
@@ -378,7 +378,7 @@ namespace CrewManifest
         {
             GUILayout.BeginVertical();
 
-            partScrollViewer = GUILayout.BeginScrollView(partScrollViewer, GUILayout.Height(200), GUILayout.Width(300));
+            partScrollViewer = GUILayout.BeginScrollView(partScrollViewer, GUILayout.Height(200), GUILayout.Width(400));
             GUILayout.BeginVertical();
 
             Debug.Log("Crewmanifest, vessel: " + Vessel.GetDisplayName() + ", IsPreLaunch: " + IsPreLaunch +
@@ -402,7 +402,7 @@ namespace CrewManifest
             {
                 var style = part == SelectedPart ? Resources.ButtonToggledStyle : Resources.ButtonStyle;
 
-                if (GUILayout.Button(string.Format("{0} {1}/{2}", part.partInfo.title, part.protoModuleCrew.Count, part.CrewCapacity), style, GUILayout.Width(265)))
+                if (GUILayout.Button(string.Format("{0} {1}/{2}", part.partInfo.title, part.protoModuleCrew.Count, part.CrewCapacity), style, GUILayout.Width(365)))
                 {
                     if (SelectedPart == part)
                         SelectedPart = null;
@@ -415,9 +415,9 @@ namespace CrewManifest
             GUILayout.EndVertical();
             GUILayout.EndScrollView();
 
-            GUILayout.Label(SelectedPart != null ? string.Format("{0} {1}/{2}", SelectedPart.partInfo.title, SelectedPart.protoModuleCrew.Count, SelectedPart.CrewCapacity) : "No Part Selected", GUILayout.Width(300));
+            GUILayout.Label(SelectedPart != null ? string.Format("{0} {1}/{2}", SelectedPart.partInfo.title, SelectedPart.protoModuleCrew.Count, SelectedPart.CrewCapacity) : "No Part Selected", GUILayout.Width(330));
 
-            partScrollViewer2 = GUILayout.BeginScrollView(partScrollViewer2, GUILayout.Height(200), GUILayout.Width(300));
+            partScrollViewer2 = GUILayout.BeginScrollView(partScrollViewer2, GUILayout.Height(200), GUILayout.Width(400));
             GUILayout.BeginVertical();
 
             if (SelectedPart != null)
@@ -485,14 +485,14 @@ namespace CrewManifest
             GUILayout.BeginHorizontal();
             GUILayout.BeginVertical();
 
-            partSourceScrollViewer = GUILayout.BeginScrollView(partSourceScrollViewer, GUILayout.Width(300), GUILayout.Height(200));
+            partSourceScrollViewer = GUILayout.BeginScrollView(partSourceScrollViewer, GUILayout.Height(200), GUILayout.Width(400));
             GUILayout.BeginVertical();
 
             foreach (Part part in CrewablePartsSource)
             {
                 var style = part == SelectedPartSource ? Resources.ButtonToggledStyle : Resources.ButtonStyle;
 
-                if (GUILayout.Button(string.Format("{0} {1}/{2}", part.partInfo.title, part.protoModuleCrew.Count, part.CrewCapacity), style, GUILayout.Width(265)))
+                if (GUILayout.Button(string.Format("{0} {1}/{2}", part.partInfo.title, part.protoModuleCrew.Count, part.CrewCapacity), style, GUILayout.Width(365)))
                 {
                     SelectedPartSource = part;
                 }
@@ -501,9 +501,9 @@ namespace CrewManifest
             GUILayout.EndVertical();
             GUILayout.EndScrollView();
 
-            GUILayout.Label(SelectedPartSource != null ? string.Format("{0} {1}/{2}", SelectedPartSource.partInfo.title, SelectedPartSource.protoModuleCrew.Count, SelectedPartSource.CrewCapacity) : "No Part Selected", GUILayout.Width(300));
+            GUILayout.Label(SelectedPartSource != null ? string.Format("{0} {1}/{2}", SelectedPartSource.partInfo.title, SelectedPartSource.protoModuleCrew.Count, SelectedPartSource.CrewCapacity) : "No Part Selected", GUILayout.Width(330));
 
-            partSourceScrollViewer2 = GUILayout.BeginScrollView(partSourceScrollViewer2, GUILayout.Height(200), GUILayout.Width(300));
+            partSourceScrollViewer2 = GUILayout.BeginScrollView(partSourceScrollViewer2, GUILayout.Height(200), GUILayout.Width(400));
             GUILayout.BeginVertical();
 
             if (SelectedPartSource != null)
@@ -512,7 +512,7 @@ namespace CrewManifest
                 {
                     ProtoCrewMember kerbal = SelectedPartSource.protoModuleCrew[i];
                     GUILayout.BeginHorizontal();
-                    GUILayout.Label(kerbal.name, GUILayout.Width(200));
+                    GUILayout.Label(String.Format("{0} ({1})", kerbal.name, kerbal.trait), GUILayout.Width(200));
                     if (SelectedPartTarget != null && SelectedPartTarget.protoModuleCrew.Count < SelectedPartTarget.CrewCapacity)
                     {
                         if (GUILayout.Button("Out", GUILayout.Width(60)))
@@ -529,14 +529,14 @@ namespace CrewManifest
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
 
-            partTargetScrollViewer = GUILayout.BeginScrollView(partTargetScrollViewer, GUILayout.Height(200), GUILayout.Width(300));
+            partTargetScrollViewer = GUILayout.BeginScrollView(partTargetScrollViewer, GUILayout.Height(200), GUILayout.Width(400));
             GUILayout.BeginVertical();
 
             foreach (Part part in CrewablePartsTarget)
             {
                 var style = part == SelectedPartTarget ? Resources.ButtonToggledRedStyle : Resources.ButtonStyle;
 
-                if (GUILayout.Button(string.Format("{0} {1}/{2}", part.partInfo.title, part.protoModuleCrew.Count, part.CrewCapacity), style, GUILayout.Width(265)))
+                if (GUILayout.Button(string.Format("{0} {1}/{2}", part.partInfo.title, part.protoModuleCrew.Count, part.CrewCapacity), style, GUILayout.Width(365)))
                 {
                     SelectedPartTarget = part;
                 }
@@ -545,9 +545,9 @@ namespace CrewManifest
             GUILayout.EndVertical();
             GUILayout.EndScrollView();
 
-            GUILayout.Label(SelectedPartTarget != null ? string.Format("{0} {1}/{2}", SelectedPartTarget.partInfo.title, SelectedPartTarget.protoModuleCrew.Count, SelectedPartTarget.CrewCapacity) : "No Part Selected", GUILayout.Width(300));
+            GUILayout.Label(SelectedPartTarget != null ? string.Format("{0} {1}/{2}", SelectedPartTarget.partInfo.title, SelectedPartTarget.protoModuleCrew.Count, SelectedPartTarget.CrewCapacity) : "No Part Selected", GUILayout.Width(330));
 
-            partTargetScrollViewer2 = GUILayout.BeginScrollView(partTargetScrollViewer2, GUILayout.Height(200), GUILayout.Width(300));
+            partTargetScrollViewer2 = GUILayout.BeginScrollView(partTargetScrollViewer2, GUILayout.Height(200), GUILayout.Width(400));
             GUILayout.BeginVertical();
 
             if (SelectedPartTarget != null)
@@ -556,7 +556,7 @@ namespace CrewManifest
                 {
                     ProtoCrewMember kerbal = SelectedPartTarget.protoModuleCrew[i];
                     GUILayout.BeginHorizontal();
-                    GUILayout.Label(kerbal.name, GUILayout.Width(200));
+                    GUILayout.Label(String.Format("{0} ({1})", kerbal.name, kerbal.trait), GUILayout.Width(200));
                     if (SelectedPartSource != null && SelectedPartSource.protoModuleCrew.Count < SelectedPartSource.CrewCapacity)
                     {
                         if (GUILayout.Button("Out", GUILayout.Width(60)))
