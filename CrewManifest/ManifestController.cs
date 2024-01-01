@@ -300,6 +300,14 @@ namespace CrewManifest
                         selectedPartSourceFound |= part.Equals(_selectedPartSource);
                     }
                 }
+                foreach (Part part in Vessel.Parts)
+                {
+                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count == 0)
+                    {
+                        _crewablePartsSource.Add(part);
+                        selectedPartSourceFound |= part.Equals(_selectedPartSource);
+                    }
+                }
 
                 if (!selectedPartSourceFound)
                     SelectedPartSource = null;
@@ -321,7 +329,17 @@ namespace CrewManifest
                 bool selectedPartTargetFound = false;
                 foreach (Part part in Vessel.Parts)
                 {
-                    if (part.CrewCapacity > 0)
+                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count != 0)
+                    {
+                        if (!part.Equals(SelectedPartSource))
+                            _crewablePartsTarget.Add(part);
+
+                        selectedPartTargetFound |= part.Equals(_selectedPartTarget);
+                    }
+                }
+                foreach (Part part in Vessel.Parts)
+                {
+                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count == 0)
                     {
                         if (!part.Equals(SelectedPartSource))
                             _crewablePartsTarget.Add(part);
@@ -614,7 +632,7 @@ namespace CrewManifest
                     labelStyle = Resources.LabelStyle;
 
                 GUILayout.BeginHorizontal();
-                GUILayout.Label(kerbal.name, labelStyle, GUILayout.Width(140));
+                GUILayout.Label(kerbal.name+"("+kerbal.trait+")", labelStyle, GUILayout.Width(140));
                 string buttonText = string.Empty;
 
                 if (kerbal.rosterStatus == ProtoCrewMember.RosterStatus.Available)
