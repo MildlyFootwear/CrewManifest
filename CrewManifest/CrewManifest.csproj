@@ -38,20 +38,20 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="aaa_Toolbar">
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\GameData\000_Toolbar\Plugins\aaa_Toolbar.dll</HintPath>
+      <HintPath>$(KSPDIR)\GameData\000_Toolbar\Plugins\aaa_Toolbar.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="ClickThroughBlocker">
       <HintPath>$(KSPDIR)\GameData\000_ClickThroughBlocker\Plugins\ClickThroughBlocker.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\Ionic.Zip.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="KSP_Log">
       <HintPath>$(KSPDIR)\GameData\SpaceTuxLibrary\Plugins\KSP_Log.dll</HintPath>
@@ -62,41 +62,41 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\System.Configuration.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\System.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\System.Security.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\System.Security.dll</HintPath>
     </Reference>
     <Reference Include="TDx.TDxInput, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3bbf7d14b78dc9f5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\TDx.TDxInput.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\TDx.TDxInput.dll</HintPath>
     </Reference>
     <Reference Include="ToolbarControl">
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\GameData\001_ToolbarControl\Plugins\ToolbarControl.dll</HintPath>
+      <HintPath>$(KSPDIR)\GameData\001_ToolbarControl\Plugins\ToolbarControl.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\Games\Kerbal Space Program\Kerbal Space Program - Restock, Nertea, JNSQ\KSP_x64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(KSPDIR)\KSP_x64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
