@@ -8,6 +8,7 @@ using UnityEngine;
 using ClickThroughFix;
 
 using static CrewManifest.RegisterToolbar;
+using UnityEngine.Rendering;
 
 namespace CrewManifest
 {
@@ -267,7 +268,15 @@ namespace CrewManifest
                 bool selectedPartFound = false;
                 foreach (Part part in Vessel.Parts)
                 {
-                    if (part.CrewCapacity > 0)
+                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count != 0)
+                    {
+                        _crewableParts.Add(part);
+                        selectedPartFound |= part.Equals(_selectedPart);
+                    }
+                }
+                foreach (Part part in Vessel.Parts)
+                {
+                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count == 0)
                     {
                         _crewableParts.Add(part);
                         selectedPartFound |= part.Equals(_selectedPart);
