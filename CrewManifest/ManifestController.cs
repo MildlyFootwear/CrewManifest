@@ -255,6 +255,11 @@ namespace CrewManifest
             SelectedPartTarget = SelectedPartTarget;
         }
 
+        private static int CompareCurrentCrew(Part x, Part y)
+        {
+            if (x.protoModuleCrew.Count > y.protoModuleCrew.Count) { return -1; } else if (x.protoModuleCrew.Count == y.protoModuleCrew.Count) { return 0; } else {  return 1; }
+        }
+
         private List<Part> _crewableParts;
         private List<Part> CrewableParts
         {
@@ -268,15 +273,7 @@ namespace CrewManifest
                 bool selectedPartFound = false;
                 foreach (Part part in Vessel.Parts)
                 {
-                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count != 0)
-                    {
-                        _crewableParts.Add(part);
-                        selectedPartFound |= part.Equals(_selectedPart);
-                    }
-                }
-                foreach (Part part in Vessel.Parts)
-                {
-                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count == 0)
+                    if (part.CrewCapacity > 0)
                     {
                         _crewableParts.Add(part);
                         selectedPartFound |= part.Equals(_selectedPart);
@@ -285,7 +282,7 @@ namespace CrewManifest
 
                 if (!selectedPartFound)
                     SelectedPart = null;
-
+                _crewableParts.Sort(CompareCurrentCrew);
                 return _crewableParts;
             }
         }
@@ -303,15 +300,7 @@ namespace CrewManifest
                 bool selectedPartSourceFound = false;
                 foreach (Part part in Vessel.Parts)
                 {
-                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count != 0)
-                    {
-                        _crewablePartsSource.Add(part);
-                        selectedPartSourceFound |= part.Equals(_selectedPartSource);
-                    }
-                }
-                foreach (Part part in Vessel.Parts)
-                {
-                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count == 0)
+                    if (part.CrewCapacity > 0)
                     {
                         _crewablePartsSource.Add(part);
                         selectedPartSourceFound |= part.Equals(_selectedPartSource);
@@ -320,7 +309,7 @@ namespace CrewManifest
 
                 if (!selectedPartSourceFound)
                     SelectedPartSource = null;
-
+                _crewablePartsSource.Sort(CompareCurrentCrew);
                 return _crewablePartsSource;
             }
         }
@@ -338,17 +327,7 @@ namespace CrewManifest
                 bool selectedPartTargetFound = false;
                 foreach (Part part in Vessel.Parts)
                 {
-                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count != 0)
-                    {
-                        if (!part.Equals(SelectedPartSource))
-                            _crewablePartsTarget.Add(part);
-
-                        selectedPartTargetFound |= part.Equals(_selectedPartTarget);
-                    }
-                }
-                foreach (Part part in Vessel.Parts)
-                {
-                    if (part.CrewCapacity > 0 && part.protoModuleCrew.Count == 0)
+                    if (part.CrewCapacity > 0)
                     {
                         if (!part.Equals(SelectedPartSource))
                             _crewablePartsTarget.Add(part);
@@ -360,6 +339,7 @@ namespace CrewManifest
                 if (!selectedPartTargetFound)
                     SelectedPartTarget = null;
 
+                _crewablePartsTarget.Sort(CompareCurrentCrew);
                 return _crewablePartsTarget;
             }
         }
