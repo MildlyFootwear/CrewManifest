@@ -224,7 +224,7 @@ namespace CrewManifest
 
                 ClearHighlight(_selectedPartSource);
                 _selectedPartSource = value;
-                SetPartHighlight(_selectedPartSource, Resources.SourceColor);
+               SetPartHighlight(_selectedPartSource, Resources.SourceColor);
             }
         }
 
@@ -257,7 +257,18 @@ namespace CrewManifest
 
         private static int CompareCurrentCrew(Part x, Part y)
         {
-            if (x.protoModuleCrew.Count > y.protoModuleCrew.Count) { return -1; } else if (x.protoModuleCrew.Count == y.protoModuleCrew.Count) { return 0; } else {  return 1; }
+            if (x.protoModuleCrew.Count > y.protoModuleCrew.Count) 
+            { 
+                return -1; 
+            } 
+            else if (x.protoModuleCrew.Count == y.protoModuleCrew.Count) 
+            { 
+                return x.partInfo.title.CompareTo(y.partInfo.title); 
+            }
+            else 
+            {
+                return 1; 
+            }
         }
 
         private List<Part> _crewableParts;
@@ -282,6 +293,7 @@ namespace CrewManifest
 
                 if (!selectedPartFound)
                     SelectedPart = null;
+
                 _crewableParts.Sort(CompareCurrentCrew);
                 return _crewableParts;
             }
@@ -309,6 +321,7 @@ namespace CrewManifest
 
                 if (!selectedPartSourceFound)
                     SelectedPartSource = null;
+
                 _crewablePartsSource.Sort(CompareCurrentCrew);
                 return _crewablePartsSource;
             }
