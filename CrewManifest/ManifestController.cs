@@ -725,7 +725,7 @@ namespace CrewManifest
 
                 SelectedKerbal.Type = (ProtoCrewMember.KerbalType)selectedType;
 
-                GUILayout.Label("Profession : " + (SelectedKerbal.Type != ProtoCrewMember.KerbalType.Tourist ? traitsList[Math.Abs(SelectedKerbal.Name.GetHashCode()) % traitsList.Count()] : "Tourist"));
+                GUILayout.Label("Profession : " + SelectedKerbal.Kerbal.trait);
 
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Cancel", GUILayout.MaxWidth(50)))
