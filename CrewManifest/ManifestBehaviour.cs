@@ -10,7 +10,7 @@ using ClickThroughFix;
 
 namespace CrewManifest
 {
-    [KSPAddon(KSPAddon.Startup.Flight, false)]
+    [KSPAddon(KSPAddon.Startup.Flight, true)]
     public class ManifestBehaviour : MonoBehaviour
     {
         public static SettingsManager Settings = new SettingsManager();
